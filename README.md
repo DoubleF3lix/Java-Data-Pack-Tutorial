@@ -1,2 +1,2 @@
-# Java-Data-Pack-Tutorial
-A web tutorial for Java Data Packs
+# Java Data Pack Tutorial
+ A web tutorial for java data packs

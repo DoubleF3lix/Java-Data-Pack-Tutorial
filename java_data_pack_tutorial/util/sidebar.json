@@ -1,0 +1,104 @@
+{
+    "units": {
+        "Home": {
+            "is_main": true,
+            "single": true
+        },
+        "Introduction": {
+            "Your First Data Pack": {},
+            "Your First Function": {},
+            "Ticks": {},
+            "Functions with Delays": {}
+        },
+        "Positions": {
+            "Introduction to Coordinates": {},
+            "Chunks": {},
+            "Block Manipulation": {
+                "parts": {
+                    "Placing a Single Block": {},
+                    "Filling an Area": {},
+                    "Cloning or Moving an Area": {}
+                }
+            },
+            "Spawnpoints": {},
+            "Locating": {}
+        },
+        "Text": {
+            "Formatting Text": {},
+            "Displaying Text": {
+                "parts": {
+                    "Chat": {},
+                    "Titles": {},
+                    "Inventory": {}
+                }
+            }
+        },
+        "Entities": {
+            "Summoning Entities": {},
+            "Selectors": {},
+            "Killing Entities": {},
+            "Teleporting Entities": {},
+            "Applying Effects": {},
+            "Tagging Entities": {},
+            "Teams": {
+                "parts": {
+                    "Introduction to Teams": {},
+                    "Creating Teams": {},
+                    "Team Rules": {}
+                }
+            }
+        },
+        "Items": {
+            "Giving Items": {},
+            "Putting Items in Specific Slots": {},
+            "Item Modifiers": {},
+            "Removing Items": {}
+        },
+        "Scoreboards": {
+            "What Are Scoreboards?": {},
+            "Critera": {},
+            "Assigning and Displaying Values": {},
+            "Doing Math with Operators": {},
+            "Fake Players": {},
+            "Scores in Text-Components": {},
+            "Triggers": {}
+        },
+        "NBT": {
+            "Introduction to NBT": {},
+            "NBT in Blocks": {},
+            "NBT in Items": {},
+            "NBT in Entities": {},
+            "Finding Entities with NBT": {},
+            "Modifying NBT": {},
+            "Storage": {},
+            "Attributes": {}
+        },
+        "Execution": {
+            "Introduction to Execute": {
+                "parts": {
+                    "// TODO": {}
+                }
+            },
+            "Storing Data with Execute": {},
+            "Bossbars": {}
+        },
+        "Gameplay Commands": {
+            "Dummy Lesson": {}
+        },
+        "Loot Tables": {
+            "Dummy Lesson": {}
+        },
+        "Predicates": {
+            "Dummy Lesson": {}
+        },
+        "Advancements": {
+            "Dummy Lesson": {}
+        },
+        "Advanced Concepts": {
+            "Dummy Lesson": {}
+        },
+        "I want to do...": {
+            "Dummy Lesson": {}
+        }
+    }
+}

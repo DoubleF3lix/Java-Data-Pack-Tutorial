@@ -1,0 +1,69 @@
+.quizbox {
+    border: 15px solid #555555;
+    background: #ffffff;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.questionStyling {
+    padding: 16px;
+    background-color: #f1f1f1;
+    font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+.questionStyling input[type="radio"] {
+    margin-top: -3px;
+    vertical-align: middle;
+}
+
+.quizbox h2 {
+    font-weight: normal;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.quizbox .prompt {
+    font-size: 22px;
+}
+
+.quizbox .line {
+    border-top: 6px solid #848484;
+}
+
+.quizbox button {
+    margin-top: 10px;
+    background-color: #63b901;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.quizbox code {
+    color: red;
+    font-family: 'Source Code Pro', Menlo, Consolas, monospace;
+    font-size: 16px;
+}
+
+.quizbox input {
+    font-family: monospace;
+    font-size: 16px;
+    padding: 1px;
+    padding-left: 3px;
+    border: 1px solid transparent;
+    height: 1.3em;
+}
+
+.quizbox .answer {
+    display: none;
+}
+
+.quizbox h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+}

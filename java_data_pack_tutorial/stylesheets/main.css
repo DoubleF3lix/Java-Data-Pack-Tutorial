@@ -1,0 +1,102 @@
+html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fffbf7;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 16px;
+}
+
+ul {
+    font-size: 15px;
+}
+
+code {
+    font-family: 'Source Code Pro', Menlo, Consolas, monospace;
+    color: #ff3f4f;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+pre code {
+    color: black;
+    background-color: #eeeeee;
+    border: 1px solid #999999;
+    display: inline-block;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* highlightjs and showdownjs don't work with plaintext or nohighlight, so this exists */
+.codeBlock {
+    color: black;
+    background-color: #eeeeee;
+    border: 1px solid #999999;
+    display: inline-block;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+blockquote {  
+    padding: 0px 10px;
+    border-left: 8px solid green;
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 40px;
+} 
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 15%;
+    padding: 1px 16px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+table .darkMode, th .darkMode, td .darkMode {
+    border: 1px solid white;
+}
+
+.changePage {
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #63b901;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    float: left;
+}
+
+.textLink, .textLink:link, .textlink:visited, .textLink:hover, .textLink:active {
+    text-decoration: none;
+    color: black;
+    cursor: text;
+}

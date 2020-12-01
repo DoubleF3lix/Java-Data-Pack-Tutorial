@@ -1,0 +1,107 @@
+/* Taken from https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    /* The value of the margin-left property should match the value of the sidebar's width property */
+    width: 15%;
+    height: 100%;
+    background-color: #ededed;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidenav .close_sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.content {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar a, .sidebar button {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.dropdownButton {
+    width: 100%;
+    border: none;
+    text-align: left;
+    background-color: #f4f4f4;
+}
+
+.dropdownButton:focus {
+    outline: none;
+}
+
+.fa.subDropdown {
+    margin-top: -18px;
+    margin-right: -5px;
+}
+
+.sidebar a.active {
+    background-color: #009f2f;
+    color: white;
+}
+
+.dropdownButton.active {
+    background-color: #007f21;
+    color: white;
+}
+
+.sidebar a:hover:not(.active), .dropdownButton:hover:not(.active) {
+    background-color: #63b901;
+    color: white;
+}
+
+.dropdownContainer {
+    display: none;
+    background-color: #f4f4f4;
+    padding-left: 8px;
+}
+
+.dropdownCaret {
+    float: right;
+    padding-right: 8px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a, .dropdownButton {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a, .dropdownButton {
+        text-align: center;
+        float: none;
+    }
+}
