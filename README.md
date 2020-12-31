@@ -14,7 +14,7 @@ First, some basic terminology.
 
 ---
 ## How To
-Every guide must be submitted in markdown (`.md` files). This is the same format used to write GitHub README's. If you've never used this, you can get it [here](https://guides.github.com/features/mastering-markdown/). To start contributing, first make a clone of the repository which is located [here](https://github.com/DoubleF3lix/Java-Data-Pack-Tutorial). Use GitHub Desktop or Git (GitHub Desktop is much more user-friendly) and clone it, then you can start editing. 
+Every guide must be submitted in markdown (`.md` files). This is the same format used to write GitHub README's. If you've never used this, you can learn about it [here](https://guides.github.com/features/mastering-markdown/). To start contributing, first make a clone of the repository which is located [here](https://github.com/DoubleF3lix/Java-Data-Pack-Tutorial). Use GitHub Desktop or Git (GitHub Desktop is much more user-friendly) and clone it, then you can start editing. 
 
 Every guide should follow information relative to the latest release.
 
