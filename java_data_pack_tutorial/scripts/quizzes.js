@@ -180,12 +180,12 @@ function changeShownQuestion(ID) {
     }
 }
 
-async function displayQuizbox(location) {
+async function displayQuizbox(unit_name, lesson_name) {
     // Get the exercise box element
     let quizbox = document.getElementById("quizbox");
 
     // Get the exercise contents
-    const quizJSONContent = await fetch(`/java_data_pack_tutorial/quizzes/${location}.json`).then(r => r.json());
+    const quizJSONContent = await fetch(`/java_data_pack_tutorial/quizzes/${unit_name}/${lesson_name}.json`).then(r => r.json());
     let selectedQuestions = getRandomElements(quizJSONContent.questions, quizJSONContent.questionCount);
 
     // Compile each question into HTML

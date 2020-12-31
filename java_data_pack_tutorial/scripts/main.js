@@ -3,7 +3,7 @@ function clearStorage() {
     sessionStorage.setItem("questions", "{}");
 }
 
-async function displayMarkdownContent(location) {
+async function displayMarkdownContent(unit_name, lesson_name) {
     showdown.extension("codehighlight", function() {
         function htmlunencode(text) {
             return (
@@ -17,7 +17,7 @@ async function displayMarkdownContent(location) {
             {
                 type: 'output',
                 filter: function (text, converter, options) {
-                    // use new shodown's regexp engine to conditionally parse codeblocks
+                    // use new showdown's regexp engine to conditionally parse codeblocks
                     var left  = "<pre><code\\b[^>]*>",
                         right = "</code></pre>",
                         flags = "g",
@@ -31,7 +31,7 @@ async function displayMarkdownContent(location) {
             }
         ];
     });
-    const markdownText = await fetch(`/java_data_pack_tutorial/guides/${location}.md`).then(r => r.text());
+    const markdownText = await fetch(`/java_data_pack_tutorial/guides/${unit_name}/${lesson_name}.md`).then(r => r.text());
     let markdownOutput = new showdown.Converter({extensions: ["codehighlight"]}).makeHtml(markdownText);
-    document.getElementById(`display-${name}-markdown`).innerHTML = markdownOutput;
+    document.getElementById(`display-guide`).innerHTML = markdownOutput;
 }

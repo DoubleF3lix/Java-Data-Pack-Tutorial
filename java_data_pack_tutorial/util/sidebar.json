@@ -27,9 +27,12 @@
             "Formatting Text": {},
             "Displaying Text": {
                 "parts": {
-                    "Chat": {},
-                    "Titles": {},
-                    "Inventory": {}
+                    "Chat": {
+                        "_comment": "Discuss tellraw"
+                    },
+                    "Titles": {
+                        "_comment": "Discuss title, times, actionbar, etc."
+                    }
                 }
             }
         },
@@ -56,7 +59,7 @@
         },
         "Scoreboards": {
             "What Are Scoreboards?": {},
-            "Critera": {},
+            "Criteria": {},
             "Assigning and Displaying Values": {},
             "Doing Math with Operators": {},
             "Fake Players": {},
@@ -64,14 +67,38 @@
             "Triggers": {}
         },
         "NBT": {
-            "Introduction to NBT": {},
-            "NBT in Blocks": {},
-            "NBT in Items": {},
-            "NBT in Entities": {},
-            "Finding Entities with NBT": {},
-            "Modifying NBT": {},
-            "Storage": {},
-            "Attributes": {}
+            "Introduction to NBT": {
+                "parts": {
+                    "Structure": {
+                        "_comment": "Note that NBT is used to refer to SNBT because NBT is not a human readable format, compares it to JSON" 
+                    },
+                    "Types": {
+                        "_comment": "(byte, short, int, long, float, double) as numbers, strings, compounds, arrays"
+                    }
+                }
+            }, 
+            "The Data Command": {
+                "parts": {
+                    "Getting data": {},
+                    "Removing Data": {}, 
+                    "Modifying Data": {}
+                }
+            }, 
+            "Storing Data": {
+                "_comment": "Discuss Storage"
+            },
+            "Attributes": {
+                "_comment": "Add a table explaining what each one does",
+                "Getting Attribute Values": {},
+                "Setting Base Attribute Values": {},
+                "Modifiers": {
+                    "parts": {
+                        "Adding": {},
+                        "Multipying By Current Value": {},
+                        "Multiplying by Base Value": {}
+                    }
+                }
+            }
         },
         "Execution": {
             "Introduction to Execute": {
@@ -85,10 +112,14 @@
         "Gameplay Commands": {
             "Dummy Lesson": {}
         },
+        "Predicates": {
+            "_comment": "Discuss finding entities with NBT in relation to the NBT unit",
+            "Dummy Lesson": {}
+        },
         "Loot Tables": {
             "Dummy Lesson": {}
         },
-        "Predicates": {
+        "Item Modifiers": {
             "Dummy Lesson": {}
         },
         "Advancements": {

@@ -61,34 +61,36 @@ for unit in units:
             lesson_index = list(unit_data.keys()).index(lesson)
             lesson_number = lesson_index + 1
 
-            if not bool(lesson_data):
-                html_output.append(
-                    f'''
-        <a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
-                    '''
-                )
-            else:
-                html_output.append(
-                    f'''
-<button class="dropdownButton" onclick="toggleDropdown(this);"><li>Lesson {lesson_number}: {lesson_name}</li>
-<i class="dropdownCaret subDropdown fa fa-caret-right"></i>
-</button>
-<div class="dropdownContainer">
-                    '''
-                )
-                for part in lesson_data["parts"]:
-                    part_data = lesson_data["parts"][part]
-                    part_name = part
-                    part_index = list(lesson_data["parts"].keys()).index(part)
-                    part_number = part_index + 1
-
+            if lesson_name != "_comment":
+                if not bool(lesson_data):
                     html_output.append(
                         f'''
-<a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}/part{part_number}.html"><li>{part_name}</li></a>
+            <a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
                         '''
                     )
+                else:
+                    html_output.append(
+                        f'''
+    <button class="dropdownButton" onclick="toggleDropdown(this);"><li>Lesson {lesson_number}: {lesson_name}</li>
+    <i class="dropdownCaret subDropdown fa fa-caret-right"></i>
+    </button>
+    <div class="dropdownContainer">
+                        '''
+                    )
+                    for part in lesson_data["parts"]:
+                        part_data = lesson_data["parts"][part]
+                        part_name = part
+                        part_index = list(lesson_data["parts"].keys()).index(part)
+                        part_number = part_index + 1
 
-                html_output.append("</div>")
+                        if part_name != "_comment":
+                            html_output.append(
+                                f'''
+        <a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}/part{part_number}.html"><li>{part_name}</li></a>
+                                '''
+                            )
+
+                    html_output.append("</div>")
         # Close out unit DIV tag
         html_output.append("</div>")
 # Close out sidebar DIV tag
