@@ -8,7 +8,9 @@
             "Your First Data Pack": {},
             "Your First Function": {},
             "Ticks": {},
-            "Functions with Delays": {}
+            "Functions with Delays": {
+                "_comment": "Teach schedule command here and entity context"
+            }
         },
         "Positions": {
             "Introduction to Coordinates": {},
