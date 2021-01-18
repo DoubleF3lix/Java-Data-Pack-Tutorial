@@ -79,7 +79,7 @@ To submit your guide(s) for review, make sure any necessary files are in your lo
 - Proper citations
 - Correct formatting
 - Meets the standards specified below
-- Has the proper HTML, Markdown, Quiz, etc. file
+- Has the proper HTML, Markdown, Quiz, etc. files
 
 When reviewing a guide, download the pull request contents into a copy of your local repository and launch an HTTP server to fully test out all changes. This is to ensure things that look right at first glance work properly (such as quizzes, hyperlinks, formatting, and images).
 
