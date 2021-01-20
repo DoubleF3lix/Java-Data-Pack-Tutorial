@@ -179,9 +179,20 @@ This is a plaintext code block
 `Inline code blocks` are done \`like this\`.<br>
 <br>
 
+Every guide should begin with this:
+```
+# Article Name
+<hr>
+
+Contents (note the newline)
+```
+
+It's "data pack" not "datapack".
+
 Here's a summary of the standards:
 - **Do not** submit half baked articles hoping/assuming someone else will fix it for you
 - **Do** attempt to write your guides to the best of your ability
 - **Do** credit any external resources where necessary
 - **Do** use proper grammar and spelling
 - **Do** use standard american english
+- **Do not** use "datapack" over "data pack". "datapack" should only be used when referring to folder names or the `/datapack` command.
