@@ -158,6 +158,14 @@ Citations:\<br><br>
 All guides should be written in standard american english with proper grammar and spelling. 
 You can use any text editor, but Visual Studio Code has a markdown preview plugin as well as a spellchecker plugin which you can download [here](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown) and [here](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
 
+Every guide should begin with this:
+```
+# Article Name
+<hr>
+
+Contents (note the newline)
+```
+
 Tables are done with standard HTML. See [this](https://www.w3schools.com/html/html_tables.asp) page on how you can create those.<br>
 
 Quotes can be done be preceding the line with `>`, like so:<br> 
@@ -178,14 +186,6 @@ This is a plaintext code block
 ```
 `Inline code blocks` are done \`like this\`.<br>
 <br>
-
-Every guide should begin with this:
-```
-# Article Name
-<hr>
-
-Contents (note the newline)
-```
 
 It's "data pack" not "datapack".
 
