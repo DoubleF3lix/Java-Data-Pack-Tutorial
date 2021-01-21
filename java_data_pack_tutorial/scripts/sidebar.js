@@ -1,6 +1,6 @@
 // Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict
 function toggleDropdown(button) {
-    button.classList.toggle("active");
+    // button.classList.toggle("active");
     let dropdownContent = button.nextElementSibling;
     if (dropdownContent.style.display === "block") {
         dropdownContent.style.display = "none";
@@ -19,6 +19,7 @@ async function displaySidebar() {
     let sidebar = document.getElementById("sidebar");
     sidebar.innerHTML = sidebarHTML;
 
+    /*
     // Remove the active status on the old element(s) if it exists
     try {
         document.getElementsByClassName("active").classList.remove("active");
@@ -31,4 +32,5 @@ async function displaySidebar() {
 
     // Set the current sidebar element as active
     document.querySelector(`a[href="${currentPage}"]`).classList.add("active");
+    */
 }

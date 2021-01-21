@@ -5,11 +5,17 @@
             "single": true
         },
         "Introduction": {
-            "Your First Data Pack": {},
-            "Your First Function": {},
-            "Ticks": {},
+            "Your First Data Pack": {
+                "_comment": "Teach file setup (folders will be created in the appropriate lesson). Create pack.mcmeta. Define what a data pack is. Teach /datapack."
+            },
+            "Your First Function": {
+                "_comment": "Make a .mcfunction file. Teach /say as a dummy command."
+            },
+            "Ticks": {
+                "_comment": "Explain what a tick is. Demonstrate tick.json and load.json, when they run, how they run."
+            },
             "Functions with Delays": {
-                "_comment": "Teach schedule command here and entity context"
+                "_comment": "Teach schedule command here"
             }
         },
         "Positions": {

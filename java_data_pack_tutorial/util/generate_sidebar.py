@@ -62,16 +62,16 @@ for unit in units:
             lesson_number = lesson_index + 1
 
             if lesson_name != "_comment":
-                if not bool(lesson_data):
+                if "parts" not in lesson_data:
                     html_output.append(
                         f'''
-            <a href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
+            <a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
                         '''
                     )
                 else:
                     html_output.append(
                         f'''
-    <button class="dropdownButton" onclick="toggleDropdown(this);"><li>Lesson {lesson_number}: {lesson_name}</li>
+    <button class="dropdownButton lesson" onclick="toggleDropdown(this);"><li>Lesson {lesson_number}: {lesson_name}</li>
     <i class="dropdownCaret subDropdown fa fa-caret-right"></i>
     </button>
     <div class="dropdownContainer">
@@ -87,7 +87,7 @@ for unit in units:
                             if part_name != "_comment":
                                 html_output.append(
                                     f'''
-            <a href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html"><li>{part_name}</li></a>
+            <a class="part" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html"><li>{part_name}</li></a>
                                     '''
                                 )
 
