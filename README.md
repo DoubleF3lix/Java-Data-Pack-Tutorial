@@ -138,14 +138,14 @@ This conversion can be further summarized by `b = i - 256`, only if `i > 127` an
 
 ---
 Citations:<br>
-1 - https://discord.com/channels/154777837382008833/306175724942000128/794228061070819368 (invite: http://discord.gg/QAFXFtZ) - Skylinerw, achieved  December 31, 2020
+1 - https://discord.com/channels/154777837382008833/306175724942000128/794228061070819368 (invite: http://discord.gg/QAFXFtZ) - Skylinerw, retrieved December 31, 2020
 
 ***END EXAMPLE***
 
 Any citations that use a discord message should have a link to the message as well as an invite to the server in this format:
-`[citation number] - [message link] (invite: [invite link]) - [message author (not nickname)], achieved [date in format of Month D, Yr]`.<br>
+`[citation number] - [message link] (invite: [invite link]) - [message author (not nickname)], retrieved [date in format of Month D, Yr]`.<br>
 Any other citation should have a direct link to the source in this format:
-`[citation number] - [direct link] - [author(s)], achieved [date in format of Month D, Yr]`.
+`[citation number] - [direct link] - [author(s)], retrieved [date in format of Month D, Yr]`.
 
 The citation section of a guide should be separated using the line like this: <br>
 \-\-\-<br>
