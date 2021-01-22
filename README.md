@@ -147,12 +147,13 @@ Any citations that use a discord message should have a link to the message as we
 Any other citation should have a direct link to the source in this format:
 `[citation number] - [direct link] - [author(s)], retrieved [date in format of Month D, Yr]`.
 
-The citation section of a guide should be separated using the line like this: <br>
-\-\-\-<br>
-Citations:\<br><br>
-1 - Insert Citation Here\<br><br>
+The citation section of a guide should be separated using the line like this:
+```
+---
+Citations:
+1 - Insert Citation Here
 2 - Insert Citation Here
-<br><br>
+```
 
 ### Grammar, Spelling, and Formatting
 All guides should be written in standard american english with proper grammar and spelling. 
@@ -168,8 +169,8 @@ Contents (note the newline)
 
 Tables are done with standard HTML. See [this](https://www.w3schools.com/html/html_tables.asp) page on how you can create those.<br>
 
-Quotes can be done be preceding the line with `>`, like so:<br> 
-`> Hello, World!`.<br>
+Quotes can be done be preceding the line with `>`, like so:<br>
+`> Hello, World!`.
 
 Code blocks are done like so (the language can be replaced with things like `json`, a full list can be found [here](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md), just note that `mcfunction` is not supported):<br>
 \`\`\`lang<br>
@@ -184,9 +185,7 @@ This is a plaintext code block
     Remember the closing brackets!
 </p></pre>
 ```
-`Inline code blocks` are done \`like this\`.<br>
-<br>
-
+`Inline code blocks` are done \`like this\`.
 It's "data pack" not "datapack".
 
 Here's a summary of the standards:
