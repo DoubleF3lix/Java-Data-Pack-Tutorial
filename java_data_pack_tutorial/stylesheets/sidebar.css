@@ -14,7 +14,6 @@
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    transition: width 500ms ease;
 }
 
 .sidenav .close_sidebar {
@@ -70,23 +69,26 @@
     color: white;
 }
 */
+
 .sidebar a:hover, .dropdownButton:hover {
     background-color: #144B77;
     color: white;
 }
 
 .dropdownContainer {
-    display: none;
     background-color: #0b0b0b;
     padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
 .lesson {
-    background-color: #111111;
+    background-color: #1c1c1c;
 }
 
-.part {
-    background-color: #1c1c1c;
+.horizontalLine {
+    border-top: 2px solid #636363;
 }
 
 .dropdownCaret {

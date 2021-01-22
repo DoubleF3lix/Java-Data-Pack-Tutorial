@@ -118,8 +118,21 @@ th {
     float: left;
 }
 
-.textLink, .textLink:link, .textlink:visited, .textLink:hover, .textLink:active {
+a:link:not(.changePage):not(.lesson):not(.single) {
+    color: #2BB1FF;
     text-decoration: none;
-    color: black;
+}
+
+a:visited:not(.changePage):not(.lesson):not(.single) {
+    color: #2BB1FF;
+}
+
+a:hover:not(.changePage):not(.lesson):not(.single) {
+    text-decoration: underline;
+}
+
+.hiddenLink, .hiddenLink:link, .hiddenLink:visited, .hiddenLink:hover, .hiddenLink:active {
+    text-decoration: none;
+    color: #eaeaea;
     cursor: text;
 }

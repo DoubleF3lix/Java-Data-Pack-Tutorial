@@ -32,6 +32,6 @@ async function displayMarkdownContent(unit_name, lesson_name) {
         ];
     });
     const markdownText = await fetch(`/java_data_pack_tutorial/guides/${unit_name}/${lesson_name}.md`).then(r => r.text());
-    let markdownOutput = new showdown.Converter({extensions: ["codehighlight"]}).makeHtml(markdownText);
+    let markdownOutput = new showdown.Converter({extensions: ["codehighlight"], tasklists: true, simpleLineBreaks: true, backslashEscapesHTMLTags: true}).makeHtml(markdownText);
     document.getElementById(`display-guide`).innerHTML = markdownOutput;
 }
