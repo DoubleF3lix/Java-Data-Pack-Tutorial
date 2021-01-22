@@ -185,7 +185,7 @@ This is a plaintext code block
     Remember the closing brackets!
 </p></pre>
 ```
-`Inline code blocks` are done \`like this\`.
+`Inline code blocks` are done \`like this\`.<br>
 It's "data pack" not "datapack".
 
 Here's a summary of the standards:
