@@ -17,6 +17,7 @@ This tutorial will cover all of the following:
 
 As this tutorial is intended for newcomers, it should be followed in order, starting with Unit 1, Lesson 1. Completing the projects and quizzes are optional, but they will help you learn to apply the concepts you've learned into data packs.
 <hr>
+
 ## Table of Contents
 
 - Unit 1: Introduction
