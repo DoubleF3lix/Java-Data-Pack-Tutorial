@@ -117,54 +117,71 @@ To specify a color to a component, use the `"color"` tag. There are 16 default c
 <table style="text-align:center;">
     <tr>
         <th>Name</th>
+        <th>Hex</th>
     </tr>
     <tr style="background-color:#000000;">
         <td>black</td>
+        <td>#000000</td>
     </tr>
     <tr style="background-color:#0000AA;">
         <td>dark_blue</td>
+        <td>#0000AA</td>
     </tr>
     <tr style="background-color:#00AA00;">
         <td>dark_green</td>
+        <td>#00AA00</td>
     </tr>
     <tr style="background-color:#00AAAA;">
         <td>dark_aqua</td>
+        <td>#00AAAA</td>
     </tr>
     <tr style="background-color:#AA0000;">
         <td>dark_red</td>
+        <td>#AA0000</td>
     </tr>
     <tr style="background-color:#AA00AA;">
         <td>dark_purple</td>
+        <td>#AA00AA</td>
     </tr>
     <tr style="background-color:#FFAA00;">
         <td>gold</td>
+        <td>#FFAA00</td>
     </tr>
     <tr style="background-color:#AAAAAA;">
         <td>gray</td>
+        <td>#AAAAAA</td>
     </tr>
     <tr style="background-color:#555555;">
         <td>dark_gray</td>
+        <td>#555555</td>
     </tr>
     <tr style="background-color:#5555FF;">
         <td>blue</td>
+        <td>#5555FF</td>
     </tr>
     <tr style="background-color:#55FF55;">
         <td>green</td>
+        <td>#55FF55</td>
     </tr>
     <tr style="background-color:#55FFFF;">
         <td>aqua</td>
+        <td>#55FFFF</td>
     </tr>
     <tr style="background-color:#FF5555;">
         <td>red</td>
+        <td>#FF5555</td>
     </tr>
     <tr style="background-color:#FF55FF;">
         <td>light_purple</td>
+        <td>#FF55FF</td>
     </tr>
     <tr style="background-color:#FFFF55;">
         <td>yellow</td>
+        <td>#FFFF55</td>
     </tr>
     <tr style="background-color:#FFFFFF;">
         <td>white</td>
+        <td>#FFFFFF</td>
     </tr>
 </table>
 <!-- TABLE NEEDS A REWORK -->
@@ -172,8 +189,8 @@ To specify a color to a component, use the `"color"` tag. There are 16 default c
 
 **Examples:**
 
-- `{"text":"I'm red.", "color":"red"}` -> <span style="color:red;">I'm red.</span>
-- `[{"text":"I'm green", "color":"green"}, {"text":" and blue.", "color":"blue"}]` -> <span style="color:green;">I'm green</span><span style="color:blue;"> and blue.</span>
+- `{"text":"I'm red.", "color":"red"}` -> <span style="color:#FF5555;">I'm red.</span>
+- `[{"text":"I'm green", "color":"green"}, {"text":" and blue.", "color":"blue"}]` -> <span style="color:#55FF55;">I'm green</span><span style="color:#5555FF;"> and blue.</span>
 - `{"text":"I'm a custom color using an Hex code.",  "color":"#748A9E"}` -> <span style="color:#748A9E;">I'm a custom color using an Hex code.</span>
 
 <br>
