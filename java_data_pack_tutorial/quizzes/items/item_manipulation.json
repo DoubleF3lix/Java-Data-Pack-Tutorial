@@ -1,0 +1,42 @@
+{
+    "questionCount": 3,
+    "questions": [
+        {
+            "type": "multiple_choice",
+            "prompt": "What's the shortest way to clear all player's inventories?",
+            "choices": [
+                "'clear @a'",
+                "'clear'",
+                "'clear @a *'"
+            ],
+            "answer": "'clear @a'"
+        },
+        {
+            "type": "boolean",
+            "prompt": "'hotbar.3' selects the 3rd hotbar slot (i.e the one selected by pressing '3')",
+            "answer": "false"
+        },
+        {
+            "type": "multiple_choice",
+            "prompt": "How do you enable advanced tooltips?",
+            "choices": [
+                "F3+H",
+                "Options -> Settings -> Advanced Tooltips",
+                "F3+G",
+                "On the world generation screen"
+            ],
+            "answer": "F3+H"
+        },
+        {
+            "type": "boolean",
+            "prompt": "Is 'give dirt @a' a valid command?",
+            "answer": "false"
+        },
+        {
+            "type": "text",
+            "prompt": "How would you put a carved pumpkin on Steve's head?",
+            "answer": "item entity Steve armor.head replace carved_pumpkin",
+            "box": 51
+        }
+    ]
+}
