@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/java_data_pack_tutorial/stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="/java_data_pack_tutorial/stylesheets/quizzes.css">
+
+        <!-- showdownjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+
+        <!-- highlightjs -->
+        <link rel="stylesheet" href="/java_data_pack_tutorial/stylesheets/stackoverflow_dark.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+
+        <script src="/java_data_pack_tutorial/scripts/main.js"></script>
+        <script src="/java_data_pack_tutorial/scripts/quizzes.js"></script>
+        <script src="/java_data_pack_tutorial/scripts/sidebar.js"></script>
+        <script>clearStorage();</script>
+
+        <title>
+            Java Data Pack Tutorial
+        </title>
+    </head>
+
+    <body>
+        <div id="sidebar"></div>
+        <script>displaySidebar();</script>
+
+        <!-- The main content -->
+        <div class="content" id="content">
+            <!-- Display the markdown file -->
+            <div id="display-guide">This content couldn't be loaded. Try again later.</div>
+            <script>displayMarkdownContent("items", "item_manipulation");</script>
+
+            <a href='/java_data_pack_tutorial/pages/unitname/nextlesson.html' class="changePage">Next >></a>
+        </div>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
