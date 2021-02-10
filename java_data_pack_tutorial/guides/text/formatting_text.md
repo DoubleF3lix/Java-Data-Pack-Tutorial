@@ -80,7 +80,11 @@ Using the `"with"` tag it's possible to display external JSON text components in
 
 #### Keybind
 
-<br>
+The `"keybind"` tag is used to display a certain key to the player, depending on their options. This is useful for telling them to press a certain key, so that even if they've rebound it, they'll be told the right thing. A list of valid keys is [here](https://minecraft.gamepedia.com/Controls#Configurable_controls).
+
+**Examples**:
+- `{"keybind": "key.attack"}` -> Left Button
+- `{"keybind": "key.jump"}` -> Space
 
 <br>
 
