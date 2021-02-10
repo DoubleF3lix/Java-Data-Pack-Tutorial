@@ -96,21 +96,32 @@ As stated earlier, components accept multiple formatting options to enhance the 
 
 #### Bold
 
+You can set `"bold"` to `true` to make text appear **bold**
+
 <br>
 
 #### Italic
+
+You can set `"italic"` to `true` to make text appear *italic*
 
 <br>
 
 #### Strikethrough
 
+You can set `"strikethrough"` to `true` to make text appear ~~strikenthrough~~
+
 <br>
 
 #### Underlined
 
+You can set `"underlined"` to `true` to make text appear <u>underlined</u>
+
 <br>
 
 #### Obfuscated
+
+You can set `"obfuscated"` to `true` to make text appear obfuscated, so it constantly cycles through random characters (see below).
+<img src="/java_data_pack_tutorial/images/text/obfuscation.png"/>
 
 <br>
 
@@ -195,7 +206,8 @@ To specify a color to a component, use the `"color"` tag. There are 16 default c
 
 - `{"text":"I'm red.", "color":"red"}` -> <span style="color:#FF5555;">I'm red.</span>
 - `[{"text":"I'm green", "color":"green"}, {"text":" and blue.", "color":"blue"}]` -> <span style="color:#55FF55;">I'm green</span><span style="color:#5555FF;"> and blue.</span>
-- `{"text":"I'm a custom color using an Hex code.",  "color":"#748A9E"}` -> <span style="color:#748A9E;">I'm a custom color using an Hex code.</span>
+- `{"text":"I'm a custom color using an Hex code.",  "color":"#748A9E"}` -> <span style="color:#748A9E;">I'm a custom color using a hex code.</span>
+- `[{"text":"I'm italic ","italic":true,"bold":true}, {"text":"and","underlined":true}, {"text":" bold."}]` -> ***I'm italic <u>and</u> bold***
 
 <br>
 
