@@ -5,11 +5,11 @@
             "type": "multiple_choice",
             "prompt": "What's the shortest way to clear all player's inventories?",
             "choices": [
-                "'clear @a'",
-                "'clear'",
-                "'clear @a *'"
+                "<code>clear @a</code>",
+                "<code>clear</code>",
+                "<code>clear @a *</code>"
             ],
-            "answer": "'clear @a'"
+            "answer": "<code>clear @a</code>"
         },
         {
             "type": "boolean",
@@ -29,7 +29,7 @@
         },
         {
             "type": "boolean",
-            "prompt": "Is 'give dirt @a' a valid command?",
+            "prompt": "Is <code>give dirt @a</code> a valid command?",
             "answer": "false"
         },
         {
