@@ -5,44 +5,72 @@
             "single": true
         },
         "Introduction": {
-            "Your First Data Pack": {},
-            "Your First Function": {},
-            "Ticks": {},
-            "Functions with Delays": {}
+            "Your First Data Pack": {
+                "_comment": "Teach file setup (folders will be created in the appropriate lesson). Create pack.mcmeta. Define what a data pack is. Teach /datapack."
+            },
+            "Your First Function": {
+                "_comment": "Make a .mcfunction file. Teach /say as a dummy command."
+            },
+            "Ticks": {
+                "_comment": "Explain what a tick is. Demonstrate tick.json and load.json, when they run, how they run."
+            },
+            "Functions with Delays": {
+                "_comment": "Teach schedule command here"
+            },
+            "Conversations": {
+                "project": true
+            }
         },
         "Positions": {
             "Introduction to Coordinates": {},
             "Chunks": {},
             "Block Manipulation": {
-                "parts": {
-                    "Placing a Single Block": {},
-                    "Filling an Area": {},
-                    "Cloning or Moving an Area": {}
-                }
+                "_comment": "Placing a Single Block, Filling an Area, Cloning or Moving an Area"
             },
-            "Spawnpoints": {},
-            "Locating": {}
+            "Building a Beacon": {
+                "project": true
+            },
+            "Spawnpoints": {
+                "_comment": "spawnpoint and setworldspawn"
+            },
+            "Locating": {
+                "_comment": "locate and locatebiome"
+            }
         },
         "Text": {
-            "Formatting Text": {},
+            "Formatting Text": {
+                "_comment": "text components"
+            },
             "Displaying Text": {
                 "parts": {
                     "Chat": {
-                        "_comment": "Discuss tellraw"
+                        "_comment": "tellraw"
                     },
                     "Titles": {
-                        "_comment": "Discuss title, times, actionbar, etc."
+                        "_comment": "titles, subtitles, times, actionbar, etc."
                     }
                 }
+            },
+            "Prettier Conversations": {
+                "project": true
             }
         },
         "Entities": {
-            "Summoning Entities": {},
-            "Selectors": {},
-            "Killing Entities": {},
-            "Teleporting Entities": {},
-            "Applying Effects": {},
-            "Tagging Entities": {},
+            "Selectors": {
+                "_comment": "teach all parameters, types, etc, maybe turn each parameter into parts later"
+            },
+            "Summoning Entities": {
+                "_comment": "summon command"
+            },
+            "Entity Manipulation": {
+                "_comment": "teleporting, killing, effect command"
+            },
+            "Vanishing Pigs": {
+                "project": true
+            },
+            "Tagging Entities": {
+                "_comment": "tag command, selector parameter"
+            },
             "Teams": {
                 "parts": {
                     "Introduction to Teams": {},
@@ -52,10 +80,15 @@
             }
         },
         "Items": {
-            "Giving Items": {},
-            "Putting Items in Specific Slots": {},
-            "Item Modifiers": {},
-            "Removing Items": {}
+            "Item Manipulation": {
+                "_comment": "give command, basic item command usage, clear command"
+            },
+            "Item Modifiers": {
+                "_comment": "demonstrate how it relates to item command"
+            },
+            "Light Level Indicator": {
+                "project": true
+            }
         },
         "Scoreboards": {
             "What Are Scoreboards?": {},
@@ -64,13 +97,19 @@
             "Doing Math with Operators": {},
             "Fake Players": {},
             "Scores in Text-Components": {},
-            "Triggers": {}
+            "Basic Calculator": {
+                "project": true
+            },
+            "Triggers": {},
+            "Non-Operator Functions": {
+                "project": true
+            }
         },
         "NBT": {
             "Introduction to NBT": {
                 "parts": {
                     "Structure": {
-                        "_comment": "Note that NBT is used to refer to SNBT because NBT is not a human readable format, compares it to JSON" 
+                        "_comment": "Note that NBT is used to refer to SNBT because NBT is not a human readable format, compare it to JSON" 
                     },
                     "Types": {
                         "_comment": "(byte, short, int, long, float, double) as numbers, strings, compounds, arrays"
@@ -102,34 +141,35 @@
         },
         "Execution": {
             "Introduction to Execute": {
-                "parts": {
-                    "// TODO": {}
-                }
+                "_comment": "discuss every kind of parameter except for store, including conditions. this lesson should apply most of the previous knowledge"
             },
-            "Storing Data with Execute": {},
-            "Bossbars": {}
+            "Storing Data with Execute": {
+                "_comment": "execute store in scores, nbt, etc."
+            },
+            "Bossbars": {
+                "_comment": "relate this to the previous lesson"
+            }
         },
         "Gameplay Commands": {
-            "Dummy Lesson": {}
+            "_comment": "discuss everything not covered in any other unit here. discuss weather, time, enchant, experience, gamemode, gamerule, playsound, and worldborder commands"
         },
         "Predicates": {
-            "_comment": "Discuss finding entities with NBT in relation to the NBT unit",
-            "Dummy Lesson": {}
+            "Dummy Lesson": {
+                "_comment": "Discuss finding entities with NBT in relation to the NBT unit"
+            }
         },
         "Loot Tables": {
-            "Dummy Lesson": {}
-        },
-        "Item Modifiers": {
             "Dummy Lesson": {}
         },
         "Advancements": {
             "Dummy Lesson": {}
         },
         "Advanced Concepts": {
-            "Dummy Lesson": {}
+            "Player Inventory Manipulation with Shulker Boxes": {}
         },
         "I want to do...": {
-            "Dummy Lesson": {}
+            "Dummy Lesson": {},
+            "_comment": "if you want to explain anything extra or in detail like raycasting, shootfacing, bedwars, etc, put it here"
         }
     }
 }

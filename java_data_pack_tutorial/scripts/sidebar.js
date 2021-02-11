@@ -1,14 +1,24 @@
 // Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict
 function toggleDropdown(button) {
-    button.classList.toggle("active");
     let dropdownContent = button.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-        // Modify the caret
+
+    // Reset all carets
+    let allDropdownButtons = document.getElementsByClassName("dropdownButton");
+    for (const dropdownButton of allDropdownButtons) {
+        dropdownButton.childNodes[1].outerHTML = "<i class=\"dropdownCaret fa fa-caret-right\"></i>";
+    }
+
+    // Close all open dropdowns
+    let allDropdowns = document.getElementsByClassName("dropdownContainer");
+    for (const dropdown of allDropdowns) {
+        dropdown.style.maxHeight = null;
+    }
+
+    if (dropdownContent.style.maxHeight) {
+        dropdownContent.style.maxHeight = null;
         button.childNodes[1].outerHTML = "<i class=\"dropdownCaret fa fa-caret-right\"></i>";
     } else {
-        dropdownContent.style.display = "block";
-        // Modify the caret
+        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
         button.childNodes[1].outerHTML = "<i class=\"dropdownCaret fa fa-caret-down\"></i>";
     }
 }
@@ -19,6 +29,7 @@ async function displaySidebar() {
     let sidebar = document.getElementById("sidebar");
     sidebar.innerHTML = sidebarHTML;
 
+    /*
     // Remove the active status on the old element(s) if it exists
     try {
         document.getElementsByClassName("active").classList.remove("active");
@@ -31,4 +42,5 @@ async function displaySidebar() {
 
     // Set the current sidebar element as active
     document.querySelector(`a[href="${currentPage}"]`).classList.add("active");
+    */
 }

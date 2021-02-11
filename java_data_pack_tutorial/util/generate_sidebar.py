@@ -13,6 +13,7 @@ with open("java_data_pack_tutorial\\pages\\sidebar.html", "w") as sidebar_html:
     sidebar_html.write("")
 
 html_output = []
+toc_output = []
 
 html_output.append(
 '''
@@ -37,15 +38,17 @@ for unit in units:
 
     if unit_data.get("is_main") == True:
         if has_index_page is False:
-            html_output.append(f'<a href="/java_data_pack_tutorial/index.html">{unit_name}</a>')
+            html_output.append(f'<a class="single" href="/java_data_pack_tutorial/index.html">{unit_name}</a>')
             has_index_page = True
         else:
             raise SyntaxError("More than one main page specified")
 
     elif unit_data.get("single") == True:
-        html_output.append(f'<a href="/java_data_pack_tutorial/pages/{snakify(unit)}.html">{unit_name}</a>')
+        html_output.append(f'<a class="single" href="/java_data_pack_tutorial/pages/{snakify(unit)}.html">{unit_name}</a>')
 
     else:
+        toc_output.append(f"- Unit {unit_number}: {unit_name}")
+
         html_output.append(
             f'''
 <button class="dropdownButton" onclick="toggleDropdown(this);">Unit {unit_number}: {unit_name}
@@ -55,42 +58,67 @@ for unit in units:
             '''
         )
 
+        project_count = 1
+        lesson_number = 0
         for lesson in unit_data:
             lesson_data = unit_data[lesson]
             lesson_name = lesson
             lesson_index = list(unit_data.keys()).index(lesson)
-            lesson_number = lesson_index + 1
+            lesson_number += 1
 
             if lesson_name != "_comment":
-                if not bool(lesson_data):
+                if lesson_data.get("project") == True:
+                    toc_output.append(f"\t- Project {project_count}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+
                     html_output.append(
                         f'''
-            <a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
+<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Project {project_count}: {lesson_name}</li></a>
+                        '''
+                    )
+                    
+                    project_count += 1
+                    lesson_number -= 1
+
+                elif "parts" not in lesson_data:
+                    toc_output.append(f"\t- Lesson {lesson_number}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+
+                    html_output.append(
+                        f'''
+<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
                         '''
                     )
                 else:
-                    html_output.append(
-                        f'''
-    <button class="dropdownButton" onclick="toggleDropdown(this);"><li>Lesson {lesson_number}: {lesson_name}</li>
-    <i class="dropdownCaret subDropdown fa fa-caret-right"></i>
-    </button>
-    <div class="dropdownContainer">
-                        '''
-                    )
-                    for part in lesson_data["parts"]:
-                        part_data = lesson_data["parts"][part]
-                        part_name = part
-                        part_index = list(lesson_data["parts"].keys()).index(part)
-                        part_number = part_index + 1
+                    if "parts" in lesson_data:
+                        if lesson_number > 1:
+                            if "parts" not in list(unit_data.values())[lesson_index - 1]:
+                                html_output.append("<div class=\"horizontalLine\"></div>")
 
-                        if part_name != "_comment":
                             html_output.append(
                                 f'''
-        <a href="/java_data_pack_tutorial/pages/unit{unit_number}/lesson{lesson_number}/part{part_number}.html"><li>{part_name}</li></a>
+<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
                                 '''
                             )
 
-                    html_output.append("</div>")
+                        toc_output.append(f"\t- Lesson {lesson_number}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+
+                        for part in lesson_data["parts"]:
+                            part_data = lesson_data["parts"][part]
+                            part_name = part
+                            part_index = list(lesson_data["parts"].keys()).index(part)
+                            part_number = part_index + 1
+
+                            toc_output.append(f"\t\t- Lesson {lesson_number}.{part_number}: [{part_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html)".expandtabs(4))
+
+                            if part_name != "_comment":
+                                html_output.append(
+                                    f'''
+<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html"><li>Lesson {lesson_number}.{part_number}: {part_name}</li></a>
+                                    '''
+                                )
+
+                    if 0 <= lesson_index + 1 < len(unit_data):
+                        html_output.append("<div class=\"horizontalLine\"></div>")
+
         # Close out unit DIV tag
         html_output.append("</div>")
 # Close out sidebar DIV tag
@@ -101,3 +129,5 @@ with open("java_data_pack_tutorial\\pages\\sidebar.html", "a") as sidebar_html:
     for element in html_output:
         q.append(element.strip())
     sidebar_html.write("\n".join(q))
+
+print("\n".join(toc_output))

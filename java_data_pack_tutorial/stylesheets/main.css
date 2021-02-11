@@ -3,59 +3,69 @@ html {
 }
 
 body {
-    background-color: #fffbf7;
+    background-color: #191919;
 }
 
 h1 {
     font-size: 32px;
 }
 
+h1, h2, h3, h4, h5 {
+    color: #eaeaea;
+}
+
 p {
-    font-size: 16px;
+    font-size: 18px;
+    color: #eaeaea;
 }
 
 ul {
-    font-size: 15px;
+    font-size: 18px;
+    color: #eaeaea;
 }
 
 code {
     font-family: 'Source Code Pro', Menlo, Consolas, monospace;
-    color: #ff3f4f;
-    background-color: #f1f1f1;
+    color: white;
+    background-color: #151515;
     font-size: 16px;
     overflow: hidden;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 pre code {
-    color: black;
-    background-color: #eeeeee;
-    border: 1px solid #999999;
-    display: inline-block;
+    color: white;
+    background-color: #111111;
+    border: 1px solid #eaeaea;
+    display: block;
     padding: 20px;
     overflow: hidden;
 }
 
 /* highlightjs and showdownjs don't work with plaintext or nohighlight, so this exists */
 .codeBlock {
-    color: black;
-    background-color: #eeeeee;
-    border: 1px solid #999999;
+    color: white;
+    background-color: #111111;
+    border: 1px solid #666666;
     display: inline-block;
     padding: 0 20px;
     padding-bottom: 20px;
 }
 
 blockquote {  
-    padding: 0px 10px;
-    border-left: 8px solid green;
+    border-left: 8px solid gray;
     border-radius: 2px;
-    display: inline-block;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    display: block;
     margin-left: 0px;
-    margin-right: 40px;
+    margin-right: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    background-color: #161611;
 } 
-
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
@@ -68,23 +78,36 @@ table {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 th, td {
     padding-left: 4px;
     padding-right: 4px;
+    color: #eaeaea;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 50px;
+    padding-left: 15px;
 }
 
-table .darkMode, th .darkMode, td .darkMode {
-    border: 1px solid white;
+tr:nth-child(even) {
+    background-color: #191919;
+}
+
+tr:nth-child(odd) {
+    background-color: #0d0d0d;
+}
+
+th {
+    font-size: 20px;
 }
 
 .changePage {
     margin-top: 30px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: #63b901;
+    background-color: #1D6CAD;
     border: none;
     border-radius: 2px;
     color: white;
@@ -95,8 +118,21 @@ table .darkMode, th .darkMode, td .darkMode {
     float: left;
 }
 
-.textLink, .textLink:link, .textlink:visited, .textLink:hover, .textLink:active {
+a:link:not(.changePage):not(.lesson):not(.single) {
+    color: #2BB1FF;
     text-decoration: none;
-    color: black;
+}
+
+a:visited:not(.changePage):not(.lesson):not(.single) {
+    color: #2BB1FF;
+}
+
+a:hover:not(.changePage):not(.lesson):not(.single) {
+    text-decoration: underline;
+}
+
+.hiddenLink, .hiddenLink:link, .hiddenLink:visited, .hiddenLink:hover, .hiddenLink:active {
+    text-decoration: none;
+    color: #eaeaea;
     cursor: text;
 }

@@ -1,11 +1,12 @@
 /* Taken from https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp */
+
 .sidebar {
     margin: 0;
     padding: 0;
     /* The value of the margin-left property should match the value of the sidebar's width property */
     width: 15%;
     height: 100%;
-    background-color: #ededed;
+    background-color: #121212;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -34,7 +35,7 @@
 
 .sidebar a, .sidebar button {
     display: block;
-    color: black;
+    color: #eaeaea;
     padding: 16px;
     text-decoration: none;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -45,7 +46,7 @@
     width: 100%;
     border: none;
     text-align: left;
-    background-color: #f4f4f4;
+    background-color: #0b0b0b;
 }
 
 .dropdownButton:focus {
@@ -57,25 +58,37 @@
     margin-right: -5px;
 }
 
+/*
 .sidebar a.active {
-    background-color: #009f2f;
+    background-color: #353535;
     color: white;
 }
 
 .dropdownButton.active {
-    background-color: #007f21;
+    background-color: #3F3F3F;
     color: white;
 }
+*/
 
-.sidebar a:hover:not(.active), .dropdownButton:hover:not(.active) {
-    background-color: #63b901;
+.sidebar a:hover, .dropdownButton:hover {
+    background-color: #144B77;
     color: white;
 }
 
 .dropdownContainer {
-    display: none;
-    background-color: #f4f4f4;
+    background-color: #0b0b0b;
     padding-left: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.lesson {
+    background-color: #1c1c1c;
+}
+
+.horizontalLine {
+    border-top: 2px solid #636363;
 }
 
 .dropdownCaret {
