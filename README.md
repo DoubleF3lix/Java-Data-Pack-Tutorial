@@ -146,6 +146,7 @@ Citations:
 2 - Insert Citation Here
 ```
 Citations should be referenced with a superscript number, with a jump link to the citations section at the bottom.
+<br><br>
 
 ### Grammar, Spelling, and Formatting
 All guides should be written in standard american english with proper grammar and spelling. 
