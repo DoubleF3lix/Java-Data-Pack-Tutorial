@@ -98,49 +98,40 @@ Do note that impersonal talk can't always be avoided, and sometimes it just help
 <br><br>
 
 ### Citations
-Any external sources that you cite, quote, mention, etc. should be credited at the bottom of the page. For instance, if you were quoting Skylinerw on how effects work with amplifiers that overflow on the client but not the server, then take this example:
+Any fact or statement is **not** publicly available knowleddge should be sourced at the bottom of the page. This does not apply to publicly available knowledge, such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. Note that all citations should be evaluated on a case-by-case basis.
+<br>
 
-***BEGIN EXAMPLE***
-
-Note that effects are read as an integer for the server and read as a byte for the client.<sup>1</sup> This can result in intended side effects. For instance, when setting a levitation effect with the amplifier level of 255, the server reads the amplifier as 128, and the client reads it as -1 due to overflow. Therefore, when the player is punched or relogs, the player's position updates, causing him to fly high into the sky. See the table below for various conversions from integer to bytes.
+Here's a small list of examples and how they should be cited:
 <table>
     <tr>
-        <th>Integer</th>
-        <th>Byte</th>
+        <th>Scenario</th>
+        <th>Citation needed</th>
     </tr>
     <tr>
-        <td>10</td>
-        <td>10</td>
+        <td>A user in a help chat explains how data storage can be used for RNG</td>
+        <td>No</td>
     </tr>
     <tr>
-        <td>100</td>
-        <td>100</td>
+        <td>Felix tweets that shaders might get more capability in the future, but it's not decided yet</td>
+        <td>Yes</td>
     </tr>
     <tr>
-        <td>127</td>
-        <td>127</td>
+        <td>A user publishes a video guide on how you can create a custom chat feature. You reference this video in a page and explain it in more laymans terms to the reader.</td>
+        <td>Yes</td>
     </tr>
     <tr>
-        <td>128</td>
-        <td>-128</td>
+        <td>boq says in discord that the `item` command might get more capability in the future</td>
+        <td>Yes</td>
     </tr>
     <tr>
-        <td>130</td>
-        <td>-126</td>
+        <td>An explanation for how overflows with the `effect` command work. This information was given to you by someone on discord.</td>
+        <td>No</td>
     </tr>
     <tr>
-        <td>200</td>
-        <td>-56</td>
+        <td>A user on discord provides a detailed explanation for how you can get around a bug</td>
+        <td>Depends</td>
     </tr>
 </table>
-
-This conversion can be further summarized by `b = i - 256`, only if `i > 127` and where `b` is the byte value and `i` is the integer value.
-
----
-Citations:<br>
-1 - https://discord.com/channels/154777837382008833/306175724942000128/794228061070819368 (invite: http://discord.gg/QAFXFtZ) - Skylinerw, retrieved December 31, 2020
-
-***END EXAMPLE***
 
 Any citations that use a discord message should have a link to the message as well as an invite to the server in this format:
 `[citation number] - [message link] (invite: [invite link]) - [message author (not nickname)], retrieved [date in format of Month D, Yr]`.<br>
@@ -154,6 +145,7 @@ Citations:
 1 - Insert Citation Here
 2 - Insert Citation Here
 ```
+Citations should be referenced with a superscript number, with a jump link to the citations section at the bottom.
 
 ### Grammar, Spelling, and Formatting
 All guides should be written in standard american english with proper grammar and spelling. 
