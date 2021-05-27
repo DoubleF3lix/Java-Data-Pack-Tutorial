@@ -98,7 +98,7 @@ Do note that personal talk can't always be avoided, and sometimes it just helps 
 <br><br>
 
 ### Citations
-Any fact or statement is **not** publicly available knowleddge should be sourced at the bottom of the page. This does not apply to publicly available knowledge, such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. Note that all citations should be evaluated on a case-by-case basis.
+Any fact or statement that is **not** publicly available knowleddge should be sourced at the bottom of the page. This does not apply to things such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. All citations will be evaluated on a case-by-case basis.
 <br>
 
 Here's a small list of examples and how they should be cited:
@@ -112,7 +112,7 @@ Here's a small list of examples and how they should be cited:
         <td>No</td>
     </tr>
     <tr>
-        <td>Felix tweets that shaders might get more capability in the future, but it's not decided yet</td>
+        <td>Felix (Xilefan) tweets that shaders might get more capability in the future, but it's not decided yet</td>
         <td>Yes</td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@ Here's a small list of examples and how they should be cited:
     </tr>
     <tr>
         <td>A user on discord provides a detailed explanation for how you can get around a bug</td>
-        <td>Depends</td>
+        <td>Maybe</td>
     </tr>
 </table>
 
