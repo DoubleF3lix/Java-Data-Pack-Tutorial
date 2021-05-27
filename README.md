@@ -1,7 +1,7 @@
 # Contributing
 A quick-start guide (hopefully) to help you contribute. 
-If you have any questions, please notify me via [my discord server](https://discord.gg/NcztW9T) or use an issue on the GitHub repository.
-Please read this entire page to get a good grasp on the standards and processes used to contribute.
+If you have any questions, please notify me via my discord or use an issue on the GitHub repository.
+Please read this entire page to get a good grasp on the standards and processes used to contribute. Most planning as well as discussion about the project is done on [my discord server](https://discord.gg/NcztW9T), so it'd be a good idea to join there.
 
 ---
 ## Terminology
