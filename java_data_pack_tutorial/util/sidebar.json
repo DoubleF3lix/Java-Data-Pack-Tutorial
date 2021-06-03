@@ -126,8 +126,8 @@
                 "_comment": "Discuss Storage"
             },
             "Attributes": {
+                "_comment": "Add a table explaining what each one does",
                 "parts": {
-                    "_comment": "Add a table explaining what each one does",
                     "Getting Attribute Values": {},
                     "Setting Base Attribute Values": {},
                     "Modifiers": {

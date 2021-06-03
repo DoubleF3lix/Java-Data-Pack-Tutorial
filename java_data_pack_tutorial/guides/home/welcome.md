@@ -70,10 +70,9 @@ As this tutorial is intended for newcomers, it should be followed in order, star
         - Lesson 2.3: [Modifying Data](/java_data_pack_tutorial/pages/nbt/the_data_command/modifying_data.html)
     - Lesson 3: [Storing Data](/java_data_pack_tutorial/pages/nbt/storing_data.html)
     - Lesson 4: Attributes
-        - Lesson 4.1: [_comment](/java_data_pack_tutorial/pages/nbt/attributes/_comment.html)
-        - Lesson 4.2: [Getting Attribute Values](/java_data_pack_tutorial/pages/nbt/attributes/getting_attribute_values.html)
-        - Lesson 4.3: [Setting Base Attribute Values](/java_data_pack_tutorial/pages/nbt/attributes/setting_base_attribute_values.html)
-        - Lesson 4.4: [Modifiers](/java_data_pack_tutorial/pages/nbt/attributes/modifiers.html)
+        - Lesson 4.1: [Getting Attribute Values](/java_data_pack_tutorial/pages/nbt/attributes/getting_attribute_values.html)
+        - Lesson 4.2: [Setting Base Attribute Values](/java_data_pack_tutorial/pages/nbt/attributes/setting_base_attribute_values.html)
+        - Lesson 4.3: [Modifiers](/java_data_pack_tutorial/pages/nbt/attributes/modifiers.html)
 - Unit 8: Tags
     - Lesson 1: [Introduction to Tags](/java_data_pack_tutorial/pages/tags/introduction_to_tags.html)
 - Unit 9: Execution
