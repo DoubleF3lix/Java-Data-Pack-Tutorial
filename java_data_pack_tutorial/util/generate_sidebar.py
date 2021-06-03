@@ -93,13 +93,7 @@ for unit in units:
                             if "parts" not in list(unit_data.values())[lesson_index - 1]:
                                 html_output.append("<div class=\"horizontalLine\"></div>")
 
-                            html_output.append(
-                                f'''
-<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
-                                '''
-                            )
-
-                        toc_output.append(f"\t- Lesson {lesson_number}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+                        toc_output.append(f"\t- Lesson {lesson_number}: {lesson_name}".expandtabs(4))
 
                         for part in lesson_data["parts"]:
                             part_data = lesson_data["parts"][part]
@@ -124,10 +118,38 @@ for unit in units:
 # Close out sidebar DIV tag
 html_output.append("</div>")
 
-with open("java_data_pack_tutorial\\pages\\sidebar.html", "a") as sidebar_html:
+with open("java_data_pack_tutorial\\pages\\sidebar.html", "w") as sidebar_html:
     q = []
     for element in html_output:
         q.append(element.strip())
     sidebar_html.write("\n".join(q))
 
-print("\n".join(toc_output))
+
+with open("java_data_pack_tutorial\\guides\\home\\welcome.md", "w") as welcome_md:
+    q = []
+    q.append(
+"""# Home
+<hr>
+
+Welcome to the **Java Data Pack Tutorial** (JDPT)! This should help to serve as a guide for newcomers, but it may also serve as a reference for experienced users. This tutorial is not a replacement of the [Official Minecraft Wiki](https://minecraft.gamepedia.com/Minecraft_Wiki), and should not be treated as such. 
+This tutorial will cover all of the following:
+- Minecraft Commands
+- Data Packs & Functions
+- Advancements
+- Predicates
+- Loot Tables
+- Tags
+- Item Modifiers
+- Recipes
+- Structures
+- World Generation Configuration
+- Custom Dimensions
+
+As this tutorial is intended for newcomers, it should be followed in order, starting with Unit 1, Lesson 1. Completing the projects and quizzes are optional, but they will help you learn to apply the concepts you've learned into data packs.
+<hr>
+
+## Table of Contents
+""")
+
+    q.append("\n".join(toc_output))
+    welcome_md.write("\n".join(q))

@@ -73,31 +73,30 @@
             },
             "Teams": {
                 "parts": {
-                    "Introduction to Teams": {},
-                    "Creating Teams": {},
+                    "Introduction to Teams": {
+                        "_comment": "Discuss creating teams and team selector"
+                    },
                     "Team Rules": {}
                 }
             }
         },
-        "Items": {
-            "Item Manipulation": {
-                "_comment": "give command, basic item command usage, clear command"
+        "Basic Items": {
+            "Giving and Taking Items": {
+                "_comment": "give command, clear command"
             },
-            "Item Modifiers": {
-                "_comment": "demonstrate how it relates to item command"
-            },
-            "Light Level Indicator": {
-                "project": true
+            "Basic Item Manipulation": {
+                "_comment": "basics of item command"
             }
         },
         "Scoreboards": {
-            "What Are Scoreboards?": {},
-            "Criteria": {},
-            "Assigning and Displaying Values": {},
+            "Introduction to Scoreboards": {},
+            "Scoreboard Criteria": {},
+            "Assigning and Displaying Values": {
+                "_comment": "Discuss score text component"
+            },
             "Doing Math with Operators": {},
             "Fake Players": {},
-            "Scores in Text-Components": {},
-            "Basic Calculator": {
+            "Calculator": {
                 "project": true
             },
             "Triggers": {},
@@ -127,24 +126,33 @@
                 "_comment": "Discuss Storage"
             },
             "Attributes": {
-                "_comment": "Add a table explaining what each one does",
-                "Getting Attribute Values": {},
-                "Setting Base Attribute Values": {},
-                "Modifiers": {
-                    "parts": {
-                        "Adding": {},
-                        "Multipying By Current Value": {},
-                        "Multiplying by Base Value": {}
+                "parts": {
+                    "_comment": "Add a table explaining what each one does",
+                    "Getting Attribute Values": {},
+                    "Setting Base Attribute Values": {},
+                    "Modifiers": {
+                        "_comment": "Adding, Multipying By Current Value, Multiplying by Base Value"
                     }
                 }
             }
         },
+        "Tags": {
+            "Introduction to Tags": {
+                "_comment": "Discuss JSON format, tag types, tags in tags, replace bool, required bool, etc. Also explain that entity tags can be used in selectors, item tags in clear, function tags with function command, etc."
+            }
+        },
         "Execution": {
             "Introduction to Execute": {
-                "_comment": "discuss every kind of parameter except for store, including conditions. this lesson should apply most of the previous knowledge"
+                "_comment": "Discuss every kind of parameter except for store, including conditions. This lesson should apply most of the previous knowledge. Also discuss execute if block #tag"
+            },
+            "Antistone": {
+                "project": true
             },
             "Storing Data with Execute": {
                 "_comment": "execute store in scores, nbt, etc."
+            },
+            "Babifier": {
+                "project": true
             },
             "Bossbars": {
                 "_comment": "relate this to the previous lesson"
@@ -153,22 +161,60 @@
         "Gameplay Commands": {
             "_comment": "discuss everything not covered in any other unit here. discuss weather, time, enchant, experience, gamemode, gamerule, playsound, and worldborder commands"
         },
-        "Predicates": {
-            "Dummy Lesson": {
-                "_comment": "Discuss finding entities with NBT in relation to the NBT unit"
+        "Advancements": {
+            "Criteria": {
+                "_comment": "Discuss triggers and requirements"
+            },
+            "Rewards": {},
+            "Display": {
+                "_comment": "Discuss parents and other display settings like background, titles, frame, etc."
+            },
+            "_comment": "Remember to discuss advancement selector"
+        },
+        "Advanced Items": {
+            "Item Counter": {
+                "project": true,
+                "_comment": "execute store result score objective player run clear player item 0"
+            },
+            "Item Modifiers": {
+                "_comment": "demonstrate how it relates to item command"
+            },
+            "Advanced Item Manipulation": {
+                "_comment": "Do more stuff with the item command. Maybe discuss SelectedItem and slots?"
+            },
+            "Light Level Indicator": {
+                "project": true
             }
         },
         "Loot Tables": {
-            "Dummy Lesson": {}
+            "Pools": {},
+            "Functions (Item Modifiers)": {},
+            "Loot Command": {
+                "_comment": "Show placing block entities with loot tables"
+            },
+            "Loot Crates": {
+                "project": true
+            },
+            "Biome Detector": {
+                "project": true
+            }
         },
-        "Advancements": {
-            "Dummy Lesson": {}
+        "Predicates": {
+            "Conditions with Predicates": {
+                "_comment": "Discuss all the different criteria, and also alternatives"
+            },
+            "Loot Table Conditions": {
+                "_comment": "Discuss finding entities with NBT in relation to the NBT unit"
+            },
+            "Predicate Checking": {
+                "_comment": "Discuss execute if predicate as well as the predicate selector"
+            }
         },
         "Advanced Concepts": {
             "Player Inventory Manipulation with Shulker Boxes": {}
         },
         "I want to do...": {
-            "Dummy Lesson": {},
+            "Get Block In Crosshair": {},
             "_comment": "if you want to explain anything extra or in detail like raycasting, shootfacing, bedwars, etc, put it here"
         }
     }
