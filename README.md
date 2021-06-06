@@ -9,18 +9,31 @@ First, some basic terminology.
 - Project - The java data pack tutorial as a whole
 - Guide(s) or Page(s) - individual pages that make up the project
 - Reviewer - Someone who makes sure that a submitted guide matches the standards
-- Impersonal - Not acknowledging the reader or the writer (or any of the contributors)
+- Impersonal - Not acknowledging the the writers (or any of the contributors)
 - Segment - A part of a guide
 
 ---
 ## How To
-Every guide must be submitted in markdown (`.md` files). This is the same format used to write GitHub README's. If you've never used this, you can learn about it [here](https://guides.github.com/features/mastering-markdown/). To start contributing, first make a clone of the repository which is located [here](https://github.com/DoubleF3lix/Java-Data-Pack-Tutorial). Use GitHub Desktop or Git (GitHub Desktop is much more user-friendly) and clone it, then you can start editing. 
+Every guide must be submitted in markdown (`.md` files). This is the same format used to write GitHub README's. If you've never used this, you can learn about it [here](https://guides.github.com/features/mastering-markdown/). To start contributing, first make a clone of the repository which is located [here](https://github.com/DoubleF3lix/Java-Data-Pack-Tutorial). Use GitHub Desktop or Git (GitHub Desktop is much more user-friendly and probably best if you've never used Git before) and clone it, then you can start editing. 
 
-Every guide should follow information relative to the latest release.
+Every guide should follow information relative to the latest release (not snapshots or release candidates).
 
-Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. A template for this guide can be found [here](https://gist.github.com/DoubleF3lix/dcdca32a1b11c18e0154e854e05a664a). The main sections of interest are line 33 and 35. You'll need to edit the first function parameter of line 33 to be the unit name, and the second parameter should be the lesson name. Do not include the file extension. Line 35 should be edited to point to the next lesson (or previous, where applicable). You can find this in the lesson plan located in `repo_folder/java_data_pack_tutorial/util/sidebar.json`. Quizzes can be added by using `<script>displayQuizbox("unitname", "lessonname");</script>` in the same way you use `displayMarkdownContent();` on line 33. This is not included in the example as you should add the quiz in the markdown file just before the "Citation" section. If the guide does not have this section, the quiz HTML can be added at the end of the markdown file.
+Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. You can generate said file by using the `GEN_PAGE.bat` file (or directly running `/java_data_pack_tutorial/util/generate_page.py` directly if you're not on Windows. Note that this needs to be run in the directory that `GEN_PAGE.bat` is in.) It's a command line tool, so you'll need to supply some arguments. The general format is this:
+```bash
+GEN_PAGE unit_name lesson_name [--title title] [--main] [--prev previous_page_link] [--next next_page_link]
+```
+Any argument wrapped with `[]` is optional. Here's a rough breakdown of these arguments:
+- `unit_name` represents the unit name for the guide that the page links to
+- `lesson_name` represents the lesson name for the guide that the page links to
+- `title` controls the page title of the site itself. Set to `"Java Data Pack Tutorial"` by default.
+- `main` is an argument that will generate the `index.html` page instead. You probably shouldn't ever need this.
+- `prev` is a file path that points to the previous lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
+- `next` is a file path that points to the next lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
+If you want to review all this, you can display all the args and their explanations with `GEN_PAGE -h`.
 
-If line breaks don't appear how you want them, use a combination of `<br>` and newlines until it looks the way you want. Custom HTML may be added within reason. Excessive use of extra HTML in guides will be rejected.
+Quizzes can be added by using `<script>displayQuizbox("unitname", "lessonname");</script>` in the same way you use `displayMarkdownContent();` on line 33. This is not included in the example as you should add the quiz in the markdown file just before the "Citation" section. If the guide does not have this citation section, the quiz HTML can be added at the end of the markdown file. A quick summary of how to create a quiz can be seen below. 
+
+Custom HTML may be added within reason. Excessive use of extra HTML in guides will be rejected.
 
 Images should go in `repo_folder/java_data_pack_tutorial/images/my_image.png`. The file name should be concise but an accurate description of the image.<br>
 Quizzes go in `repo_folder/java_data_pack_tutorial/quizzes/unitname/lessonname.json`.<br> 
@@ -29,7 +42,7 @@ Guide files go in `repo_folder/java_data_pack_tutorial/guides/unitname/lessonnam
 Basic markdown and other formatting is discussed in the "Grammar, Spelling, and Formatting" section below.
 
 Quizzes can be created following this template:
-```jsonc
+```json
 {
     // This defines how many questions from the question pool will be presented in a random order
     "questionCount": 3,
@@ -81,7 +94,7 @@ To submit your guide(s) for review, make sure any necessary files are in your lo
 - Meets the standards specified below
 - Has the proper HTML, Markdown, Quiz, etc. files
 
-When reviewing a guide, download the pull request contents into a copy of your local repository and launch an HTTP server to fully test out all changes. This is to ensure things that look right at first glance work properly (such as quizzes, hyperlinks, formatting, and images).
+When reviewing a guide, download the pull request contents into a copy of your local repository and launch an HTTP server (you can use `SERVER.bat` to do this for you) to fully test out all changes. This is to ensure things that look right at first glance work properly (such as quizzes, hyperlinks, formatting, and images).
 
 Any guide that plainly shows a lack of effort will be rejected.
 
@@ -94,7 +107,7 @@ While this guide should serve as a reference to experienced users and also a tut
 
 See the difference? If this is still confusing, just know that all text written in this part of the contribution guide is written in an impersonal format and guides should be written to try to replicate this as close as possible. If submitted guides aren't written perfectly, that's okay. Edits can be made later, and they're called first drafts for a reason. **However, just because there is a review process where changes will likely be made does not mean half-baked articles should be submitted for someone else to clean up.** 
 
-Do note that personal talk can't always be avoided, and sometimes it just helps the article flow better. For instance, it's better to write "You should avoid using `execute as @a run`" instead of "It is advised that `execute as @a run` is not used". The impersonal part sounds extremely dry, while using the word "you" helps the flow of the sentence tremendously. A general rule of thumb is **it's okay to sometimes mention the reader, but you should always avoid mentioning the writer (I, we, etc.)**. 
+Do note that personal talk can't (and shouldn't) always be avoided, and sometimes it just helps the article flow better. For instance, it's better to write "You should avoid using `execute as @a run`" instead of "It is advised that `execute as @a run` is not used". The impersonal part sounds extremely dry, while using the word "you" helps the flow of the sentence tremendously. A general rule of thumb is **it's okay to mention the reader, but you should always avoid mentioning the writer (I, we, etc.)**. 
 <br><br>
 
 ### Citations
@@ -165,21 +178,18 @@ Tables are done with standard HTML. See [this](https://www.w3schools.com/html/ht
 Quotes can be done be preceding the line with `>`, like so:<br>
 `> Hello, World!`.
 
-Code blocks are done like so (the language can be replaced with things like `json`, a full list can be found [here](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md), just note that `mcfunction` is not supported):<br>
+Code blocks are done like so (the language can be replaced with things like `json`, a full list can be found [here](https://github.com/highlightjs/highlight.js/blob/master/SUPPORTED_LANGUAGES.md). There's also a plugin so `mcfunction` (or `mc`, as an alias) is supported as well.):<br>
 \`\`\`lang<br>
-print("Hello, World!")<br>
+say Hello, World!<br>
 \`\`\`
 
-Plaintext code blocks break with `highlight.js`, so they must be done like this:
-```html
-<pre><p class="codeBlock">
+Plaintext must be done like this:
+```plaintext
 This is a plaintext code block
     It works with indentation too
-    Remember the closing brackets!
-</p></pre>
 ```
 `Inline code blocks` are done \`like this\`.<br>
-It's "data pack" not "datapack".
+Use "data pack" not "datapack".
 
 Here's a summary of the standards:
 - **Do not** submit half baked articles hoping/assuming someone else will fix it for you
