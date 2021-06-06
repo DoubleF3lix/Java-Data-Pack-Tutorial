@@ -42,7 +42,7 @@ Guide files go in `repo_folder/java_data_pack_tutorial/guides/unitname/lessonnam
 Basic markdown and other formatting is discussed in the "Grammar, Spelling, and Formatting" section below.
 
 Quizzes can be created following this template:
-```json
+```jsonc
 {
     // This defines how many questions from the question pool will be presented in a random order
     "questionCount": 3,
