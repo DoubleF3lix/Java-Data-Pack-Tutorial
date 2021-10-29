@@ -17,7 +17,7 @@ Most text editors like Notepad should work for creating functions. However, it i
 
 
 ### Installing Visual Studio Code Extensions (Optional)
-The first one is language-mcfunction by <a class="textLink" href="/Java-Data-Pack-Tutorial/images/mondaysBeLike.png">Arcen</a>soth, which you can get [here](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction), or by clicking the extensions button in your toolbar (it looks like a grid of four with one block coming off) and searching for "language-mcfunction". This extension enables syntax highlighting for minecraft functions.
+The first one is language-mcfunction by Arcensoth, which you can get [here](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction), or by clicking the extensions button in your toolbar (it looks like a grid of four with one block coming off) and searching for "language-mcfunction". This extension enables syntax highlighting for minecraft functions.
 
 The second extension is Datapack Helper Plus by SPGoding which you can get [here](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server), or by clicking the extensions button in your toolbar and searching for "data-pack helper plus". This extension helps with auto-completion, command syntax, code snippets, and all sorts of other features.
 

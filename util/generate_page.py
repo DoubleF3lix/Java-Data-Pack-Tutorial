@@ -15,7 +15,8 @@ lesson_name = args.lesson
 previous_page = args.prev
 next_page = args.next
 
-output_path = os.path.join(os.getcwd(), f"Java-Data-Pack-Tutorial/pages/{unit_name}/{lesson_name}.html") if not args.main else os.path.join(os.getcwd(), f"Java-Data-Pack-Tutorial/index.html")
+output_path = os.path.join(os.getcwd(), f"pages/{unit_name}/{lesson_name}.html") if not args.main else os.path.join(os.getcwd(), f"index.html")
+md_output_path = os.path.join(os.getcwd(), f"guides/{unit_name}/{lesson_name}.md") if not args.main else None
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
 with open(output_path, "w") as outfile:
@@ -60,3 +61,6 @@ f"""<!DOCTYPE html>
     </body>
 </html>
 """)
+
+if md_output_path:
+    with open(md_output_path, "w") as _: ...

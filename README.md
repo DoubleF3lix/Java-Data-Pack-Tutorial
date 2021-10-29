@@ -1,16 +1,14 @@
+# NOTE
+The live branch is on `gh-pages`. The default branch (`dev`), is where all changes should be pushed to.
+Whatever editor you use, make sure your "working directory" is in the root of the `Java-Data-Pack-Tutorial` folder. This will ensure scripts like `generate_page.py` will function properly.
+
+
+---
 # Contributing
 A quick-start guide (hopefully) to help you contribute. 
 If you have any questions, please notify me via my discord or use an issue on the GitHub repository.
 Please read this entire page to get a good grasp on the standards and processes used to contribute. Most planning as well as discussion about the project is done on [my discord server](https://discord.gg/NcztW9T), so it'd be a good idea to join there.
 
----
-## Terminology
-First, some basic terminology. 
-- Project - The java data pack tutorial as a whole
-- Guide(s) or Page(s) - individual pages that make up the project
-- Reviewer - Someone who makes sure that a submitted guide matches the standards
-- Impersonal - Not acknowledging the the writers (or any of the contributors)
-- Segment - A part of a guide
 
 ---
 ## How To
@@ -111,7 +109,7 @@ Do note that personal talk can't (and shouldn't) always be avoided, and sometime
 <br><br>
 
 ### Citations
-Any fact or statement that is **not** publicly available knowleddge should be sourced at the bottom of the page. This does not apply to things such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. All citations will be evaluated on a case-by-case basis.
+Any fact or statement that is **not** publicly available knowledge should be sourced at the bottom of the page. This does not apply to things such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. All citations will be evaluated on a case-by-case basis.
 <br>
 
 Here's a small list of examples and how they should be cited:
@@ -196,5 +194,4 @@ Here's a summary of the standards:
 - **Do** attempt to write your guides to the best of your ability
 - **Do** credit any external resources where necessary
 - **Do** use proper grammar and spelling
-- **Do** use standard american english
 - **Do not** use "datapack" over "data pack". "datapack" should only be used when referring to folder names or the `/datapack` command.
