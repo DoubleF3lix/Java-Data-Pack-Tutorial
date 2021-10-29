@@ -1,5 +1,4 @@
 # NOTE
-The live branch is on `gh-pages`. The default branch (`dev`) is where all changes should be pushed to.
 Whatever editor you use, make sure your "working directory" is in the root of the `Java-Data-Pack-Tutorial` folder. This will ensure scripts like `generate_page.py` will function properly.
 
 
@@ -84,7 +83,7 @@ Quizzes can be created following this template:
 
 ---
 ## How to Submit and Review
-To submit your guide(s) for review, make sure any necessary files are in your local copy of the repository. Then, create a pull request. Other contributors and reviewers will make sure your guide meets all the following criteria:
+To submit your guide(s) for review, make sure any necessary files are in your local copy of the repository. Then, create a pull request to the `main` branch. Other contributors and reviewers will make sure your guide meets all the following criteria:
 - Accurate information
 - Proper spelling and grammar
 - Proper citations
@@ -92,9 +91,9 @@ To submit your guide(s) for review, make sure any necessary files are in your lo
 - Meets the standards specified below
 - Has the proper HTML, Markdown, Quiz, etc. files
 
-When reviewing a guide, download the pull request contents into a copy of your local repository and launch an HTTP server (you can use `SERVER.bat` to do this for you) to fully test out all changes. This is to ensure things that look right at first glance work properly (such as quizzes, hyperlinks, formatting, and images).
+When reviewing a guide, download the pull request contents into a copy of your local repository and launch an HTTP server (you can use `python -m http.server` to do this for you) to fully test out all changes. This is to ensure things that look right at first glance are functional (such as quizzes, hyperlinks, formatting, and images).
 
-Any guide that plainly shows a lack of effort will be rejected.
+Any guide that shows a clear lack of effort will be rejected.
 
 ---
 ## Standards
