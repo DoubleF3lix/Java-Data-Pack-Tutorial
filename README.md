@@ -1,5 +1,5 @@
 # NOTE
-The live branch is on `gh-pages`. The default branch (`dev`), is where all changes should be pushed to.
+The live branch is on `gh-pages`. The default branch (`dev`) is where all changes should be pushed to.
 Whatever editor you use, make sure your "working directory" is in the root of the `Java-Data-Pack-Tutorial` folder. This will ensure scripts like `generate_page.py` will function properly.
 
 
