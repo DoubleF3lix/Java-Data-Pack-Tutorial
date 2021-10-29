@@ -1,1 +1,1 @@
-python %~dp0java_data_pack_tutorial\util\generate_page.py %*
+python %~dp0util\generate_page.py %*
