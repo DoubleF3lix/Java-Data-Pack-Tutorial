@@ -35,7 +35,7 @@ async function displayMarkdownContent(unit_name, lesson_name) {
     });
     let markdownOutput;
     try {
-        let markdownText = await getFileContent(`/java_data_pack_tutorial/guides/${unit_name}/${lesson_name}.md`);
+        let markdownText = await getFileContent(`/Java-Data-Pack-Tutorial/guides/${unit_name}/${lesson_name}.md`);
         markdownOutput = new showdown.Converter({extensions: ["highlightjs"], tasklists: true, simpleLineBreaks: true, backslashEscapesHTMLTags: true}).makeHtml(markdownText);
     } catch (e) {
         markdownOutput = `<h1>Uh-oh! This content could not be loaded</h1><p>Have this cat picture instead</p><img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=375&w=630" alt="A very cute cat">`;

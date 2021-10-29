@@ -8,7 +8,7 @@ You should be familiar with your system and file explorer, be comfortable with c
 
 
 ### Enabling File Extensions
-Enabling file extensions will allow to you create functions that aren't secretly `.txt` files. On Windows 10, you can find this in the "View" tab. <br><br>![Enabling File Extensions](/java_data_pack_tutorial/images/enableFileExtensions.png)
+Enabling file extensions will allow to you create functions that aren't secretly `.txt` files. On Windows 10, you can find this in the "View" tab. <br><br>![Enabling File Extensions](/Java-Data-Pack-Tutorial/images/enableFileExtensions.png)
 
     
 ## Text Editors
@@ -17,7 +17,7 @@ Most text editors like Notepad should work for creating functions. However, it i
 
 
 ### Installing Visual Studio Code Extensions (Optional)
-The first one is language-mcfunction by <a class="textLink" href="/java_data_pack_tutorial/images/mondaysBeLike.png">Arcen</a>soth, which you can get [here](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction), or by clicking the extensions button in your toolbar (it looks like a grid of four with one block coming off) and searching for "language-mcfunction". This extension enables syntax highlighting for minecraft functions.
+The first one is language-mcfunction by <a class="textLink" href="/Java-Data-Pack-Tutorial/images/mondaysBeLike.png">Arcen</a>soth, which you can get [here](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction), or by clicking the extensions button in your toolbar (it looks like a grid of four with one block coming off) and searching for "language-mcfunction". This extension enables syntax highlighting for minecraft functions.
 
 The second extension is Datapack Helper Plus by SPGoding which you can get [here](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server), or by clicking the extensions button in your toolbar and searching for "data-pack helper plus". This extension helps with auto-completion, command syntax, code snippets, and all sorts of other features.
 
@@ -64,4 +64,4 @@ Depending on your version, you may need to edit the `pack_format`. See the table
 
 By adding the `pack.mcmeta` file with the text entered, Minecraft will recognize the folder as a datapack. 
 Enter your world and type `/datapack list` in chat. If you were already in the world, type `/reload` before typing `/datapack list`. Note that the `data` folder is not required to make a datapack, but it is required for all content. <br>
-If you see something like `[vanilla (built-in)], [file/<DATAPACK NAME> (world)]`, then you did it! If not, you can download a sample datapack [here](/java_data_pack_tutorial/samples/unit1/lesson1.zip) to compare.
+If you see something like `[vanilla (built-in)], [file/<DATAPACK NAME> (world)]`, then you did it! If not, you can download a sample datapack [here](/Java-Data-Pack-Tutorial/samples/unit1/lesson1.zip) to compare.

@@ -18,7 +18,7 @@ Every guide must be submitted in markdown (`.md` files). This is the same format
 
 Every guide should follow information relative to the latest release (not snapshots or release candidates).
 
-Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. You can generate said file by using the `GEN_PAGE.bat` file (or directly running `/java_data_pack_tutorial/util/generate_page.py` directly if you're not on Windows. Note that this needs to be run in the directory that `GEN_PAGE.bat` is in.) It's a command line tool, so you'll need to supply some arguments. The general format is this:
+Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. You can generate said file by using the `GEN_PAGE.bat` file (or directly running `/Java-Data-Pack-Tutorial/util/generate_page.py` directly if you're not on Windows. Note that this needs to be run in the directory that `GEN_PAGE.bat` is in.) It's a command line tool, so you'll need to supply some arguments. The general format is this:
 ```bash
 GEN_PAGE unit_name lesson_name [--title title] [--main] [--prev previous_page_link] [--next next_page_link]
 ```
@@ -27,17 +27,17 @@ Any argument wrapped with `[]` is optional. Here's a rough breakdown of these ar
 - `lesson_name` represents the lesson name for the guide that the page links to
 - `title` controls the page title of the site itself. Set to `"Java Data Pack Tutorial"` by default.
 - `main` is an argument that will generate the `index.html` page instead. You probably shouldn't ever need this.
-- `prev` is a file path that points to the previous lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
-- `next` is a file path that points to the next lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
+- `prev` is a file path that points to the previous lesson. This should follow format of `"/Java-Data-Pack-Tutorial/pages/unit_name/lesson_name.html"`.
+- `next` is a file path that points to the next lesson. This should follow format of `"/Java-Data-Pack-Tutorial/pages/unit_name/lesson_name.html"`.
 If you want to review all this, you can display all the args and their explanations with `GEN_PAGE -h`.
 
 Quizzes can be added by using `<script>displayQuizbox("unitname", "lessonname");</script>` in the same way you use `displayMarkdownContent();` on line 33. This is not included in the example as you should add the quiz in the markdown file just before the "Citation" section. If the guide does not have this citation section, the quiz HTML can be added at the end of the markdown file. A quick summary of how to create a quiz can be seen below. 
 
 Custom HTML may be added within reason. Excessive use of extra HTML in guides will be rejected.
 
-Images should go in `repo_folder/java_data_pack_tutorial/images/my_image.png`. The file name should be concise but an accurate description of the image.<br>
-Quizzes go in `repo_folder/java_data_pack_tutorial/quizzes/unitname/lessonname.json`.<br> 
-Guide files go in `repo_folder/java_data_pack_tutorial/guides/unitname/lessonname.md`.
+Images should go in `repo_folder/Java-Data-Pack-Tutorial/images/my_image.png`. The file name should be concise but an accurate description of the image.<br>
+Quizzes go in `repo_folder/Java-Data-Pack-Tutorial/quizzes/unitname/lessonname.json`.<br> 
+Guide files go in `repo_folder/Java-Data-Pack-Tutorial/guides/unitname/lessonname.md`.
 
 Basic markdown and other formatting is discussed in the "Grammar, Spelling, and Formatting" section below.
 
