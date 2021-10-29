@@ -9,7 +9,7 @@ def snakify(text):
         output.append(part.lower())
     return "_".join(output)
 
-with open("java_data_pack_tutorial\\pages\\sidebar.html", "w") as sidebar_html:
+with open("Java-Data-Pack-Tutorial\\pages\\sidebar.html", "w") as sidebar_html:
     sidebar_html.write("")
 
 html_output = []
@@ -20,10 +20,10 @@ html_output.append(
 <div class="sidebar">
 <!-- fa-caret-down|right symbol and showdownjs -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/java_data_pack_tutorial/stylesheets/sidebar.css">
+<link rel="stylesheet" href="/Java-Data-Pack-Tutorial/stylesheets/sidebar.css">
 ''')
 
-with open("java_data_pack_tutorial\\util\\sidebar.json", "r") as sidebar_json:
+with open("Java-Data-Pack-Tutorial\\util\\sidebar.json", "r") as sidebar_json:
     sidebar_json = json.loads(sidebar_json.read())
 
 units = sidebar_json["units"]
@@ -38,13 +38,13 @@ for unit in units:
 
     if unit_data.get("is_main") == True:
         if has_index_page is False:
-            html_output.append(f'<a class="single" href="/java_data_pack_tutorial/index.html">{unit_name}</a>')
+            html_output.append(f'<a class="single" href="/Java-Data-Pack-Tutorial/index.html">{unit_name}</a>')
             has_index_page = True
         else:
             raise SyntaxError("More than one main page specified")
 
     elif unit_data.get("single") == True:
-        html_output.append(f'<a class="single" href="/java_data_pack_tutorial/pages/{snakify(unit)}.html">{unit_name}</a>')
+        html_output.append(f'<a class="single" href="/Java-Data-Pack-Tutorial/pages/{snakify(unit)}.html">{unit_name}</a>')
 
     else:
         toc_output.append(f"- Unit {unit_number}: {unit_name}")
@@ -68,11 +68,11 @@ for unit in units:
 
             if lesson_name != "_comment":
                 if lesson_data.get("project") == True:
-                    toc_output.append(f"\t- Project {project_count}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+                    toc_output.append(f"\t- Project {project_count}: [{lesson_name}](/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
 
                     html_output.append(
                         f'''
-<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Project {project_count}: {lesson_name}</li></a>
+<a class="lesson" href="/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Project {project_count}: {lesson_name}</li></a>
                         '''
                     )
                     
@@ -80,11 +80,11 @@ for unit in units:
                     lesson_number -= 1
 
                 elif "parts" not in lesson_data:
-                    toc_output.append(f"\t- Lesson {lesson_number}: [{lesson_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
+                    toc_output.append(f"\t- Lesson {lesson_number}: [{lesson_name}](/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html)".expandtabs(4))
 
                     html_output.append(
                         f'''
-<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
+<a class="lesson" href="/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}.html"><li>Lesson {lesson_number}: {lesson_name}</li></a>
                         '''
                     )
                 else:
@@ -101,12 +101,12 @@ for unit in units:
                             part_index = list(lesson_data["parts"].keys()).index(part)
                             part_number = part_index + 1
 
-                            toc_output.append(f"\t\t- Lesson {lesson_number}.{part_number}: [{part_name}](/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html)".expandtabs(4))
+                            toc_output.append(f"\t\t- Lesson {lesson_number}.{part_number}: [{part_name}](/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html)".expandtabs(4))
 
                             if part_name != "_comment":
                                 html_output.append(
                                     f'''
-<a class="lesson" href="/java_data_pack_tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html"><li>Lesson {lesson_number}.{part_number}: {part_name}</li></a>
+<a class="lesson" href="/Java-Data-Pack-Tutorial/pages/{snakify(unit_name)}/{snakify(lesson_name)}/{snakify(part_name)}.html"><li>Lesson {lesson_number}.{part_number}: {part_name}</li></a>
                                     '''
                                 )
 
@@ -118,14 +118,14 @@ for unit in units:
 # Close out sidebar DIV tag
 html_output.append("</div>")
 
-with open("java_data_pack_tutorial\\pages\\sidebar.html", "w") as sidebar_html:
+with open("Java-Data-Pack-Tutorial\\pages\\sidebar.html", "w") as sidebar_html:
     q = []
     for element in html_output:
         q.append(element.strip())
     sidebar_html.write("\n".join(q))
 
 
-with open("java_data_pack_tutorial\\guides\\home\\welcome.md", "w") as welcome_md:
+with open("Java-Data-Pack-Tutorial\\guides\\home\\welcome.md", "w") as welcome_md:
     q = []
     q.append(
 """# Home

@@ -1,16 +1,14 @@
+# NOTE
+The live branch is on `gh-pages`. The default branch (`dev`) is where all changes should be pushed to.
+Whatever editor you use, make sure your "working directory" is in the root of the `Java-Data-Pack-Tutorial` folder. This will ensure scripts like `generate_page.py` will function properly.
+
+
+---
 # Contributing
 A quick-start guide (hopefully) to help you contribute. 
 If you have any questions, please notify me via my discord or use an issue on the GitHub repository.
 Please read this entire page to get a good grasp on the standards and processes used to contribute. Most planning as well as discussion about the project is done on [my discord server](https://discord.gg/NcztW9T), so it'd be a good idea to join there.
 
----
-## Terminology
-First, some basic terminology. 
-- Project - The java data pack tutorial as a whole
-- Guide(s) or Page(s) - individual pages that make up the project
-- Reviewer - Someone who makes sure that a submitted guide matches the standards
-- Impersonal - Not acknowledging the the writers (or any of the contributors)
-- Segment - A part of a guide
 
 ---
 ## How To
@@ -18,7 +16,7 @@ Every guide must be submitted in markdown (`.md` files). This is the same format
 
 Every guide should follow information relative to the latest release (not snapshots or release candidates).
 
-Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. You can generate said file by using the `GEN_PAGE.bat` file (or directly running `/java_data_pack_tutorial/util/generate_page.py` directly if you're not on Windows. Note that this needs to be run in the directory that `GEN_PAGE.bat` is in.) It's a command line tool, so you'll need to supply some arguments. The general format is this:
+Every pull request you submit should not only include the markdown file as well as any extra files, but also an HTML file to link your guide to the site. You can generate said file by using the `GEN_PAGE.bat` file (or directly running `/Java-Data-Pack-Tutorial/util/generate_page.py` directly if you're not on Windows. Note that this needs to be run in the directory that `GEN_PAGE.bat` is in.) It's a command line tool, so you'll need to supply some arguments. The general format is this:
 ```bash
 GEN_PAGE unit_name lesson_name [--title title] [--main] [--prev previous_page_link] [--next next_page_link]
 ```
@@ -27,17 +25,17 @@ Any argument wrapped with `[]` is optional. Here's a rough breakdown of these ar
 - `lesson_name` represents the lesson name for the guide that the page links to
 - `title` controls the page title of the site itself. Set to `"Java Data Pack Tutorial"` by default.
 - `main` is an argument that will generate the `index.html` page instead. You probably shouldn't ever need this.
-- `prev` is a file path that points to the previous lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
-- `next` is a file path that points to the next lesson. This should follow format of `"/java_data_pack_tutorial/pages/unit_name/lesson_name.html"`.
+- `prev` is a file path that points to the previous lesson. This should follow format of `"/Java-Data-Pack-Tutorial/pages/unit_name/lesson_name.html"`.
+- `next` is a file path that points to the next lesson. This should follow format of `"/Java-Data-Pack-Tutorial/pages/unit_name/lesson_name.html"`.
 If you want to review all this, you can display all the args and their explanations with `GEN_PAGE -h`.
 
 Quizzes can be added by using `<script>displayQuizbox("unitname", "lessonname");</script>` in the same way you use `displayMarkdownContent();` on line 33. This is not included in the example as you should add the quiz in the markdown file just before the "Citation" section. If the guide does not have this citation section, the quiz HTML can be added at the end of the markdown file. A quick summary of how to create a quiz can be seen below. 
 
 Custom HTML may be added within reason. Excessive use of extra HTML in guides will be rejected.
 
-Images should go in `repo_folder/java_data_pack_tutorial/images/my_image.png`. The file name should be concise but an accurate description of the image.<br>
-Quizzes go in `repo_folder/java_data_pack_tutorial/quizzes/unitname/lessonname.json`.<br> 
-Guide files go in `repo_folder/java_data_pack_tutorial/guides/unitname/lessonname.md`.
+Images should go in `repo_folder/Java-Data-Pack-Tutorial/images/my_image.png`. The file name should be concise but an accurate description of the image.<br>
+Quizzes go in `repo_folder/Java-Data-Pack-Tutorial/quizzes/unitname/lessonname.json`.<br> 
+Guide files go in `repo_folder/Java-Data-Pack-Tutorial/guides/unitname/lessonname.md`.
 
 Basic markdown and other formatting is discussed in the "Grammar, Spelling, and Formatting" section below.
 
@@ -111,7 +109,7 @@ Do note that personal talk can't (and shouldn't) always be avoided, and sometime
 <br><br>
 
 ### Citations
-Any fact or statement that is **not** publicly available knowleddge should be sourced at the bottom of the page. This does not apply to things such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. All citations will be evaluated on a case-by-case basis.
+Any fact or statement that is **not** publicly available knowledge should be sourced at the bottom of the page. This does not apply to things such as command syntax, information derived from the game code, information stated in a help chat on MCC, etc. Things that should be cited are unique techniques that someone came up with (such as a technique for removing the numbers on the sidebar from a scoreboard), quotes from developers, etc. All citations will be evaluated on a case-by-case basis.
 <br>
 
 Here's a small list of examples and how they should be cited:
@@ -196,5 +194,4 @@ Here's a summary of the standards:
 - **Do** attempt to write your guides to the best of your ability
 - **Do** credit any external resources where necessary
 - **Do** use proper grammar and spelling
-- **Do** use standard american english
 - **Do not** use "datapack" over "data pack". "datapack" should only be used when referring to folder names or the `/datapack` command.
