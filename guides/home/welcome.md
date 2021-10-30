@@ -1,7 +1,7 @@
 # Home
 <hr>
 
-Welcome to the **Java Data Pack Tutorial** (JDPT)! This should help to serve as a guide for newcomers, but it may also serve as a reference for experienced users. This tutorial is not a replacement of the [Official Minecraft Wiki](https://minecraft.gamepedia.com/Minecraft_Wiki), and should not be treated as such. 
+Welcome to the **Java Data Pack Tutorial** (JDPT)! This should help to serve as a guide for newcomers, but it may also serve as a reference for experienced users. This tutorial is not a replacement of the [Minecraft Wiki](https://minecraft.gamepedia.com/Minecraft_Wiki), and should not be treated as such. 
 This tutorial will cover all of the following:
 - Minecraft Commands
 - Data Packs & Functions
